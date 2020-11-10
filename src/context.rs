@@ -86,19 +86,19 @@ pub type Result<S, E = Error> = std::result::Result<S, E>;
 #[derive(Default, Debug)]
 pub struct Context
 {
-    packages: Vec<Package>,
-    types: Vec<TypeInfo>,
-    types_by_name: HashMap<String, usize>,
-    services: Vec<Service>,
-    services_by_name: HashMap<String, usize>,
+    pub packages: Vec<Package>,
+    pub types: Vec<TypeInfo>,
+    pub types_by_name: HashMap<String, usize>,
+    pub services: Vec<Service>,
+    pub services_by_name: HashMap<String, usize>,
 }
 
 #[derive(Default, Debug)]
-struct Package
+pub struct Package
 {
-    name: Option<String>,
-    types: Vec<usize>,
-    services: Vec<usize>,
+    pub name: Option<String>,
+    pub types: Vec<usize>,
+    pub services: Vec<usize>,
 }
 
 /// Message or enum type.
